@@ -3,13 +3,18 @@
     Create a Canvas on a Website and get input from the keyboard
 
 ## What is code?
-    Instructions
+    A list of instructions
     Top to Bottom
     Languages
         JavaScript
     
 
-## Code Examples
+## How is code run in the browser
+    HTML is the content.
+    JavaScript is the logic and interractivity.
+    (Demonstrate running something in the browser).
+
+## Code Example
     let i = 5;
     let b = 4;
 
@@ -19,6 +24,7 @@
     console.log(b);
 
     //Add more
+
 ## Variables
     Types
     Variable is a box (East-West)
