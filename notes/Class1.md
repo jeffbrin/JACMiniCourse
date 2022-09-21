@@ -49,7 +49,7 @@
         console.log("Go Outside");
     }
     else{
-        console.log("Movie Night!);
+        console.log("Movie Night!");
     }
 ## Functions (Brief)
     Code Block
