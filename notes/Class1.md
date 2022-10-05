@@ -3,15 +3,38 @@
     Create a Canvas on a Website and get input from the keyboard
 
 ## What is code?
-    A list of instructions
-    Top to Bottom
-    Languages
+    A list of instructions interpreted by a computer
+
+    Code is read from top (line 1) to bottom
+
+    Not all code is read if not used
+        For example functions will not be interpreted if not called
+    Programing Languages
         JavaScript
+            Used for most websites due to 'ease of use'
+            Can be run directly in the browser
+            It is an interpreted language
+        C#
+            Language used mostly by Microsoft, it is a very powerful
+            compiled language.
+        Python
+            Interpreted and Compiled
+            Used for scripting, automation, etc.
+
+    Interpreted Vs. Compiled
+        Interpreted languages don't have to 'build' they will run until there is an error.
+
+        Compiled languages MUST be 'built'. 
+        The compiler goes through the code line by line and will give errors before even being able to run the program.
+        They will not let you use a variable that wasn't declared
+
+    
+
     
 
 ## How is code run in the browser
     HTML is the content.
-    JavaScript is the logic and interractivity.
+    JavaScript is the logic and interactivity.
     (Demonstrate running something in the browser).
 
 ## Code Example
@@ -23,24 +46,75 @@
 
     console.log(b);
 
-    //Add more
 
+ 
 ## Variables
-    Types
-    Variable is a box (East-West)
+### Variables have types (in JS)
+    
+        Number
+        String
+        Array
+        Objects
+
+    Variable is a box you assign a value to
+    
     JS Nonsense:
         Weakly Typed
         Type coercion
     console stuff showing data types
     
+    Naming Conventions
     
+    
+## Syntax
+    Like traditional languages there are syntactical rules
+        Semicolon (;) means the end of line 
+
+        Equals Sign(=) means assigning something to a variable
+
+        Quotes(" ") Denotes a string notation
+
+        Period (.) Using on an object in order to access something within the object
+
+        Braces { } Denotes a 'block' of code
+
+        Brackets ( ) Used for If statements and functions
+
+        Square Brackets [ ] Used with arrays in order to access something within the array
+
+    Equality Operators
+        (==) or (===) Means equality testing
+            1 == 2 -> evaluates to false
+        (!=) Means not equal
+            1 != 2 -> evaluates to true
+        (>) Greater than
+            1 > 2 -> evaluates to false
+        (<) Less than
+            1 < 2 -> evaluates to true
+        (>=) Greater than OR equals
+            2 >= 2 -> evaluates to true
+        (<=) Less than OR equals
+            2 <= 2 -> evaluates to true
+
+    Operators
+        (+) Addition
+        (-) Subtracting
+        (/) Division
+        (%) Modulo
+        (*) Multiplication
 
 ## If Statements
-    Go over what brackets and braces are ( ) { }
-    (===) (==) (!=) (!)
-    Goes into code block if the statement is TRUE
-    Else
-    Else if()
+    Goes into code block (Braces) if the statement is TRUE
+    if(true){
+        //go Here
+    }
+    else{
+        //go here if false
+    }
+
+
+
+    else if()
 
 ## Code Examples
     let isSunny = true;
@@ -54,5 +128,9 @@
 ## Functions (Brief)
     Code Block
     Can pass in arguments
+
+    function addTwoNumbers(first, second){
+        return first + second;
+    }
 
 ---
