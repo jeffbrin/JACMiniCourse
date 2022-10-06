@@ -28,9 +28,6 @@
         The compiler goes through the code line by line and will give errors before even being able to run the program.
         They will not let you use a variable that wasn't declared
 
-    
-
-    
 
 ## How is code run in the browser
     HTML is the content.
@@ -47,12 +44,12 @@
     console.log(b);
 
 
- 
 ## Variables
 ### Variables have types (in JS)
     
         Number
         String
+        Boolean
         Array
         Objects
 
@@ -67,20 +64,13 @@
     
     
 ## Syntax
-    Like traditional languages there are syntactical rules
-        Semicolon (;) means the end of line 
 
-        Equals Sign(=) means assigning something to a variable
-
-        Quotes(" ") Denotes a string notation
-
-        Period (.) Using on an object in order to access something within the object
-
-        Braces { } Denotes a 'block' of code
-
-        Brackets ( ) Used for If statements and functions
-
-        Square Brackets [ ] Used with arrays in order to access something within the array
+    Operators
+        (+) Addition
+        (-) Subtracting
+        (/) Division
+        (%) Modulo
+        (*) Multiplication
 
     Equality Operators
         (==) or (===) Means equality testing
@@ -96,12 +86,7 @@
         (<=) Less than OR equals
             2 <= 2 -> evaluates to true
 
-    Operators
-        (+) Addition
-        (-) Subtracting
-        (/) Division
-        (%) Modulo
-        (*) Multiplication
+    
 
 ## If Statements
     Goes into code block (Braces) if the statement is TRUE
@@ -125,6 +110,7 @@
     else{
         console.log("Movie Night!");
     }
+
 ## Functions (Brief)
     Code Block
     Can pass in arguments
@@ -133,4 +119,22 @@
         return first + second;
     }
 
+## Code Demo (If timing allows)
+ - Go to Class1 Demo
+
 ---
+
+## Syntax
+        Semicolon (;) means the end of line 
+
+        Equals Sign(=) means assigning something to a variable
+
+        Quotes(" ") Denotes a string notation
+
+        Period (.) Using on an object in order to access something within the object
+
+        Braces { } Denotes a 'block' of code
+
+        Brackets ( ) Used for If statements and functions
+
+        Square Brackets [ ] Used with arrays in order to access something within the array

@@ -3,10 +3,6 @@ let clicksCount = 0;
 const canvas = document.getElementsByTagName('canvas')[0];
 const context = canvas.getContext('2d');
 
-
-
-
-
 // Don't forget
 canvas.tabIndex = 1;
 
