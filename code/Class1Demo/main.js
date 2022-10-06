@@ -1,3 +1,5 @@
+
+
 let clicksCount = 0;
 
 const canvas = document.getElementsByTagName('canvas')[0];
@@ -9,7 +11,15 @@ canvas.tabIndex = 1;
 canvas.width = 1000;
 canvas.height = 1000;
 
+
+// let fillTextX = canvas.width / 2 - 50;
+// let lastTime = 0;
+// let speed = 100;
+
 canvas.addEventListener('keypress', handleKeyPress);
+
+
+
 
 function handleKeyPress(event)
 {
@@ -108,3 +118,29 @@ function ifElseIfStatementDemo()
         console.log("They are tied");
     }
 }
+
+// gameLoop();
+
+// function gameLoop(currentTime = 0)
+// {
+//     const deltaTime = (currentTime - lastTime) / 1000;
+//     update(deltaTime);
+//     render();
+//     lastTime = currentTime;
+//     requestAnimationFrame(gameLoop);
+// }
+
+// function update(dt)
+// {
+//     if (fillTextX + 40 >= canvas.width || fillTextX <= 0)
+//     {
+//         speed *= -1;
+//     }
+//     fillTextX += speed * dt;
+// }
+// function render()
+// {
+//     context.clearRect(0, 0, canvas.width, canvas.height);
+//     context.font = '40px Arial';
+//     context.fillText(clicksCount, fillTextX, canvas.height / 2 - 50);
+// }
