@@ -56,7 +56,7 @@ In order to be able to properly use the canvas we have to add a few lines of cod
 
 
 ### 🎯Step 1:
-We have our canvas in the HTML and we have a variable that is storing that HTML object. We now what to resize the canvas in order to make it bigger to better suit our needs.
+We have our canvas in the HTML and we have a variable that is storing that HTML object. We now want to resize the canvas in order to make it bigger to better suit our needs.
 
 In order to do so we will access two properties on the canvas variable we have:
 
