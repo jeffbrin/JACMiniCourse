@@ -96,7 +96,7 @@ An event listener attaches to a specific HTML object and will 'listen' for event
 4. onkeydown ⌨️
 5. keypress ⌨️
 
-We will be using the last one called 'onkeydown'. This means that when the user presses down a key the listener will trigger giving us an opportunity to do something with this key press.
+We will be using the last one called 'keypress'. This means that when the user presses down a key the listener will trigger giving us an opportunity to do something with this key press.
 
     canvas.addEventListener('keypress', handleKeyPress);
 
