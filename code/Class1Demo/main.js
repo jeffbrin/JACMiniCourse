@@ -8,8 +8,8 @@ const context = canvas.getContext('2d');
 // Don't forget
 canvas.tabIndex = 1;
 
-canvas.width = 1000;
-canvas.height = 1000;
+canvas.width = 1280;
+canvas.height = 720;
 
 
 // let fillTextX = canvas.width / 2 - 50;
