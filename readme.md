@@ -5,6 +5,8 @@ If you haven't already, please fill out <a href="https://forms.gle/p7shZXRzxinZ3
 
 If you want to make some personal projects at home, you can download VS Code [Here](https://code.visualstudio.com/)
 
+Useful resources that you can read/watch to understand more available [Here](./Resources/resources.md)
+
 ## Week 1
 In class 1, we covered
 - What is a programming language?
