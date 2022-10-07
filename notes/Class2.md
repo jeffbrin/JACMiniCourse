@@ -43,7 +43,7 @@
 ## 🖌️ Draw onto the Canvas 🖼️
 ### 🎯Step 0 :
 What we did last class.
-Code is available on GitHub [here](https://github.com/jeffbrin/JACMiniCourse).
+Code is available on GitHub [here](https://github.com/jeffbrin/JACMiniCourse/tree/main/Previous%20Classes%20Code/Class%201).
 Look Under 'Previous Classes Code' Folder
 
 ### 🎯Step 0.5:
