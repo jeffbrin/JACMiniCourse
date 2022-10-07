@@ -11,7 +11,7 @@
     return values
         Really useful and we're going to use for functions that get something
         GetRandomNumber()
-    Reuse the code for various applications (Code Reuse)
+    Reuse the code for various applications
 
 ## Loops 🔁
     let foo = 0;
@@ -52,7 +52,7 @@ In order to be able to properly use the canvas we have to add a few lines of cod
     const context = canvas.getContext('2d');
     canvas.tabIndex = 1;
 
-
+🗒️*Note **const** is another reserved key word used to declare a variable (like **let**) however once a value is assign to it, it cannot be changed*
 
 
 ### 🎯Step 1:
