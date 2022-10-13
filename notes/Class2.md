@@ -410,7 +410,7 @@ If you struggled to follow along, don't worry. The completed code can be found [
 <br><br><br>
 
 
-# 🖌️ At Home Exercise: Draw onto the Canvas 🖼️
+# 🖌️ (Optional) At Home Exercise: Draw onto the Canvas 🖼️
 ### 🎯Step 0 :
 What we did last class.
 Code is available on GitHub [here](https://github.com/jeffbrin/JACMiniCourse/tree/main/Previous%20Classes%20Code/Class%201).
