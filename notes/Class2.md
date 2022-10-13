@@ -185,7 +185,7 @@ The x direction stays the same, but the y axis is flipped.
 
 <img src="https://www.w3resource.com/w3r_images/html-canvas-grid.png">
 
-<br>
+<br><br>
 
 # 🏓 Pong 1 : Drawing the paddle and the ball.
 ## 🎯Step 1 - Create the project folder:
@@ -193,9 +193,11 @@ In order to begin making your program, you're going to need to start a project i
 
 ## Step 1.1:
 <b>Open Visual Studio and Open a new Folder</b>
+
 <img src="../Assets/OpenFolder.png" height=400>
 
 <b> If another project opens, just click on file -> Open Folder</b>
+
 <img src="../Assets/OpenFolder_File.png" height=300>
 <img src="../Assets/OpenFolder_File_OpenFolder.png" height=300>
 
@@ -204,7 +206,8 @@ Navigate to wherever you want your folder made, we recommend your Documents fold
 To Create a folder, right click -> new -> folder.
 
 <img src="../Assets/NewFolder.png" height=300>
-<br><br><br>
+
+<br><br>
 
 ## 🎯 Step 2 - HTML
 
@@ -221,13 +224,20 @@ Select the new html. In the html file, write **!** and click **enter**. Your htm
 ## Step 2.3 - Link the JavaScript file.
 In the html file, just above the title line, enter the following line.
 
-    <link rel="stylesheet" href="main.js">
+    <script src="main.js" defer></script>
 
 This will let the html file know that we want to add some JavaScript to this page, and the JavaScript will be in the main.js file.
 
 <img src="../Assets/JsLink.png">
 
-## Step 2.4 - Add the canvas.
+## Step 2.4 - Link the CSS file.
+Below the line you just added, add another line to link the css we'll be making in the future. This will add a bit of styling to the page.
+
+    <link rel="stylesheet" href="style.css">
+
+<img src="../Assets/CSSLink.png">
+
+## Step 2.5 - Add the canvas.
 The canvas is what we will use to draw on. Before we access it in JavaScript though, we need to add it to the HTML. Add the following line inside the body tags.
 
     <canvas></canvas>
@@ -236,21 +246,65 @@ The canvas is what we will use to draw on. Before we access it in JavaScript tho
 
 > In case you weren't able to follow along, the full html code can be found [here](../code/Pong-1/index.html)
 
-**Congrats! You've made the html file. Now we can move onto the JavaScript!**
+<br><br>
 
-### 🎯Step 0.5:
-In order to be able to properly use the canvas we have to add a few lines of code and store the canvas's context into a variable.
+## Step 3 - Use our CSS
+Since we're tight on time, we aren't going to go into CSS in this course. 
+Make a new file like you did for index.html but this time, call it **style.css** . In the contents, copy and paste the following code.
 
-    const context = canvas.getContext('2d');
+    canvas{
+    display: block;
+    background-color: black;
+    margin: auto;
+    }
+
+    body{
+        background-color: grey;
+    }
+
+If you want to learn more about CSS, visit [W3Schools](https://www.w3schools.com/css/). They have lots of amazing tutorials.
+
+**Congrats! You've made the HTML and CSS files. Now we can move onto the JavaScript!**
+
+<br><br>
+
+## Step 4 - Draw the left paddle.
+Finally, we're going to do something related to the game. We're going to draw out first paddle. We'll start off super simple, and then introduce some better programming practices as we go.
+
+## Step 4.1 - Create the JavaScript file.
+Like you did before for the html and css files, create a new file but this time, call is **main.js**
+
+## Step 4.2 - Get the canvas and context.
+In JavaScript, we can get access to elements from the html file. To get these objects, we need to use the following code.
+
+    let canvas = document.getElementsByTagName("canvas")[0];
+
+How does this line work?
+1. We create a variable called canvas.
+2. We call the getElementsByTagName() function, passing in "canvas" as the argument. You can think of **document** as the html file. This gets a list of all the canvas elements on the html page.
+3. Since there can be multiple canvases, that function returns a list of all the canvases found on the page. To get the first / only one, we add the [0] to the end. We will look at lists a bit later in the course, but this basically means *give me the first one*.
+4. We now have the canvas from the html file, in the canvas variable.
+
+
+One more item that we haven't spoken about is the context. What the context really is isn't important, but you can think of it as the paint brush that we use to paint onto the canvas. You'll see more what we mean later. To get the context, we need to add the following line to our code.
+
+    let context = canvas.getContext("2d");
+
+Now we have the canvas and context variables, the last thing we need to add is this next line.
+
+    // Make the canvas able to recieve input
     canvas.tabIndex = 1;
 
-🗒️*Note **const** is another reserved key word used to declare a variable (like **let**) however once a value is assign to it, it cannot be changed*
+This just lets the canvas recieve input. It'll be important in later classes.
 
+## Step 4.3 - Set the canvas size
+If you run your code with Live Server, you'll see that our canvas is quite small. If you didn't install Live Server in the first class, or forgot how to run it, see [here](./Class1.md#Installing-and-running-Live-Server) for instructions.
 
-### 🎯Step 1:
-We have our canvas in the HTML and we have a variable that is storing that HTML object. We now want to resize the canvas in order to make it bigger to better suit our needs.
-
-
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 
 # 🖌️ At Home Exercise: Draw onto the Canvas 🖼️
 ### 🎯Step 0 :

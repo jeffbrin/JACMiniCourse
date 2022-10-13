@@ -22,15 +22,7 @@ let BALL_SIZE = 20;
 let ballPositionX = CANVAS_WIDTH / 2 - BALL_SIZE / 2
 let ballPositionY = CANVAS_HEIGHT / 2 - BALL_SIZE / 2
 
-
-// Function called every frame
-function GameLoop(currentTime = 0){
-    
-    // Update logic
-    render();
-
-    requestAnimationFrame(GameLoop);
-}
+render()
 
 // Display the game logic
 function render(){
@@ -46,5 +38,3 @@ function render(){
     // Display the ball
     context.fillRect(ballPositionX, ballPositionY, BALL_SIZE, BALL_SIZE)
 }
-
-GameLoop();

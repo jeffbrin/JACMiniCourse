@@ -138,3 +138,28 @@
         Brackets ( ) Used for If statements and functions
 
         Square Brackets [ ] Used with arrays in order to access something within the array
+
+# Installing and running Live Server
+Live server lets us run our code and see changes in real time.
+
+To install live server, look at the bar on the leftmost side of Visual Studio and open the extensions tab.
+
+<img src="../Assets/VSCodeExtensions.png">
+
+<br><br>
+
+In this tab, look up Live Server and select the first result.
+
+<img src="../Assets/LiveServerExtension.png">
+
+<br><br>
+
+Click on **Install** and then you may need to press **enable**, if the enable button doesn't show up around where the install button was, don't worry.
+
+<img src="../Assets/LiveServerInstall.png">
+
+Now you're all set, you should see a **Go Live** button at the very bottom right of Visual Studio Code
+
+<img src="../Assets/GoLiveButton.png">
+
+That's the button that you'll press to run your code.
