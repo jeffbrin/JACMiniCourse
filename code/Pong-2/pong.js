@@ -1,9 +1,6 @@
 const canvas = document.getElementsByTagName('canvas')[0];
 const context = canvas.getContext('2d');
 
-// Make the canvas able to recieve input
-canvas.tabIndex = 1;
-
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 720;
 canvas.width = CANVAS_WIDTH;
@@ -23,13 +20,26 @@ let ballPositionX = CANVAS_WIDTH / 2 - BALL_SIZE / 2
 let ballPositionY = CANVAS_HEIGHT / 2 - BALL_SIZE / 2
 
 
+// Make the canvas able to recieve input
+canvas.tabIndex = 1;
+
+let lastTime = 0;
 // Function called every frame
 function GameLoop(currentTime = 0){
+    // Divide by 1000 to go from ms to s
+    const deltaTime = (currentTime - lastTime) / 1000;
+    lastTime = currentTime;
     
     // Update logic
+    update(deltaTime);
     render();
 
     requestAnimationFrame(GameLoop);
+}
+
+// Update the game logic.
+function update(deltaTime){
+    // TODO...
 }
 
 // Display the game logic

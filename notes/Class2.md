@@ -1,46 +1,258 @@
+# Review From Class 1
+## Variables
+A variable is a box that can contain a value.
+For Example
+
+    let numberOfPoints = 0;
+    //  Player scores...
+    numberOfPoints = numberOfPoints + 1
+
+## If Statements
+An if statement allows us to perform different actions depending on a condition.
+For example:
+    
+    // This code runs every time the player scores
+    playerScore = playerScore + 1
+    if (playerScore > 5){
+        console.log("Congratulations! You won.)
+    }
+    else if(playerScore == 4){
+        console.log("Congratulations! You scored, one more goal to go.")
+    }
+    else{
+        console.log("Congratulations! You scored.)
+    }
+
+
+
+<br>
+
 # Class 2
 
 ## Goal 🥅 :
     Draw Rectangles and the ball onto the canvas
 
 ## Functions
-    Go Over Functions again
-    Reiterate braces and brackets
-    Parameters
-    Scoping
-    return values
-        Really useful and we're going to use for functions that get something
-        GetRandomNumber()
-    Reuse the code for various applications
+A function is a chunk of code that can be run with a keyword.
 
-## Loops 🔁
-    let foo = 0;
-
-    for(let i = 0; i < 3; i++){
-        foo += 1;
+    function yell(){
+        console.log("Hello!");
     }
 
-    console.log(foo);
+### Parameters
+---
+Parameters are values that you can give to a function which change or determine the behaviour of the function.
+
+    function yell(message){
+        console.log(message);
+    }
+
+### Return Values
+---
+Functions "Return" values. This means that when a function finishes, it can place a value into a variable.
+
+    let firstValue = 4;
+    let secondValue = 6;
+    let sum = addValues(firstValue, secondValue);
+
+    function addValues(a, b){
+        result = a + b;
+        return result;
+    }
+    
+### Practical example for pong
+---
+
+    // Checks if player 1 scored.
+    function didPlayer1Score(ballXPosition){
+        if (ballXPosition > CANVAS_WIDTH){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    // Checks if player 2 scored.
+    function didPlayer2Score(ballXPosition){
+        if (ballXPosition < 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    if(didPlayer1Score() == true){
+        player1Score = player1Score + 1;
+    }
+    else if (didPlayer2Score() == true){
+        player2Score = player2Score + 1
+    }
+
+---
+
+    // Advanced
+    function didPlayer1Score(ballXPosition){
+        return ballXPosition > CANVAS_WIDTH;
+    }
+
+    function didPlayer2Score(ballXPosition){
+        return ballXPosition < 0;
+    }
+
+    if(didPlayer1Score(ballXPosition)){
+        player1Score++;
+    }
+    else if (didPlayer2Score(ballXPosition)){
+        player2Score++;
+    }
+
+## Loops 🔁
+
+### While Loops
+
+    while( CONDITION IS TRUE ){
+        // Do something
+    } 
+
+    // Similar to if statements
+    if ( CONDITION IS TRUE ){
+        // Do Something
+    }
+
+While loops loop until the condition is false.
+
+    let number = 0;
+    while (number < 10){
+        console.log(number);
+        number = number + getUserInput();
+    }
+
+### For Loops
+Similar to while loops, but with different syntax
+
+    for(let i = 0; i < 4; i++){
+        console.log(i);
+    }
+<details> 
+  <summary>Output </summary>
+   0<br>
+   1<br>
+   2<br>
+   3<br>
+</details>
+<br>
+A while loop translated into a for loop
+    
+    // While loop
+    let i = 0;
+    while (i < 10){
+        console.log(i);
+        i = i + 1;
+    }
+
+    // For loop
+    for(let i = 0; i < 10; i++){
+        console.log(i);
+    }
+
+<details> 
+  <summary>Output </summary>
+   0<br>
+   1<br>
+   2<br>
+   3<br>
+   4<br>
+   5<br>
+   6<br>
+   7<br>
+   8<br>
+   9
+</details>
+
+<br>
 
 ## Canvas
-    (0,0) Top left
-    y++ is down
-    x++ is right
+You may be used to this cartesian plane
+
+<img src="https://imgs.search.brave.com/FQ-_1spPeKvphuHp6fBCtL_lHPgCxHKKEKOJ_9Yusns/rs:fit:728:943:1/g:ce/aHR0cHM6Ly93d3cu/Zm9ybXNiaXJkcy5j/b20vZm9ybWltZy9t/b3JlLWdyYXBoLXBh/cGVycy8xOTQ0MC9z/aW5nbGUtcXVhZHJh/bnQtY2FydGVzaWFu/LWdyaWQtbGFyZ2Ut/bDEucG5n" height = 300>
+
+
+<br>
+In programming, screen coordinates look like this.
+The x direction stays the same, but the y axis is flipped.
 
 <img src="https://www.w3resource.com/w3r_images/html-canvas-grid.png">
 
+<br>
 
-## Game Loop
-    Receive Input -> Update the Game Logic -> Render on the screen
-    Delta Time
-    Frames Per Second
+# 🏓 Pong 1 : Drawing the paddle and the ball.
+## 🎯Step 1 - Create the project folder:
+In order to begin making your program, you're going to need to start a project in Visual Studio Code. Follow the next steps to startup your project.
 
-<img src=https://gameprogrammingpatterns.com/images/game-loop-simple.png>
+## Step 1.1:
+<b>Open Visual Studio and Open a new Folder</b>
+<img src="../Assets/OpenFolder.png" height=400>
 
-## Drawing On the Canvas
-    context
+<b> If another project opens, just click on file -> Open Folder</b>
+<img src="../Assets/OpenFolder_File.png" height=300>
+<img src="../Assets/OpenFolder_File_OpenFolder.png" height=300>
 
-## 🖌️ Draw onto the Canvas 🖼️
+## Step 1.2:
+Navigate to wherever you want your folder made, we recommend your Documents folder. Then create the folder and select it.
+To Create a folder, right click -> new -> folder.
+
+<img src="../Assets/NewFolder.png" height=300>
+<br><br><br>
+
+## 🎯 Step 2 - HTML
+
+## Step 2.1 - Create the file.
+In the new project, create a new file and call it **index.html**
+
+<img src="../Assets/NewFile.png" height=300>
+
+## Step 2.2 - Add the html template.
+Select the new html. In the html file, write **!** and click **enter**. Your html file should look like the following.
+
+<img src="../Assets/HtmlTemplate.png" height=300>
+
+## Step 2.3 - Link the JavaScript file.
+In the html file, just above the title line, enter the following line.
+
+    <link rel="stylesheet" href="main.js">
+
+This will let the html file know that we want to add some JavaScript to this page, and the JavaScript will be in the main.js file.
+
+<img src="../Assets/JsLink.png">
+
+## Step 2.4 - Add the canvas.
+The canvas is what we will use to draw on. Before we access it in JavaScript though, we need to add it to the HTML. Add the following line inside the body tags.
+
+    <canvas></canvas>
+
+<img src="../Assets/AddedCanvas.png">
+
+> In case you weren't able to follow along, the full html code can be found [here](../code/Pong-1/index.html)
+
+**Congrats! You've made the html file. Now we can move onto the JavaScript!**
+
+### 🎯Step 0.5:
+In order to be able to properly use the canvas we have to add a few lines of code and store the canvas's context into a variable.
+
+    const context = canvas.getContext('2d');
+    canvas.tabIndex = 1;
+
+🗒️*Note **const** is another reserved key word used to declare a variable (like **let**) however once a value is assign to it, it cannot be changed*
+
+
+### 🎯Step 1:
+We have our canvas in the HTML and we have a variable that is storing that HTML object. We now want to resize the canvas in order to make it bigger to better suit our needs.
+
+
+
+# 🖌️ At Home Exercise: Draw onto the Canvas 🖼️
 ### 🎯Step 0 :
 What we did last class.
 Code is available on GitHub [here](https://github.com/jeffbrin/JACMiniCourse/tree/main/Previous%20Classes%20Code/Class%201).
@@ -190,8 +402,4 @@ The function will now look like:
         }
     }
 
-
-### 🎯Step 5 Game Loop
-Probably next class
----
 
