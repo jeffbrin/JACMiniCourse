@@ -18,3 +18,11 @@ The notes can be found [Here](./notes/Class1.md)
 The code demo can be found [Here](./code/Class1Demo)
 
 The code where we left off at can be found [Here](./Previous%20Classes%20Code/Class%201/)
+
+## Week 2
+The notes can be found [Here](./notes/Class2.md)<br>
+The code demo can be found [Here](./code/Pong-1)
+
+## Week 3
+The notes can be found [Here](./notes/Class3.md)<br>
+The code demo can be found [Here](./code/Pong-2)
