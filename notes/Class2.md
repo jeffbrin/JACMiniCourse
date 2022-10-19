@@ -389,21 +389,24 @@ If you've gotten this far, hopefully you understand more or less how the drawing
   <summary>Hint 1</summary>
    <b>We have variables for the canvas height and width, so we can use those to draw the paddle at the bottom right. Because the paddle is drawn from the top left, it will be drawn off the screen if you simply draw it at CANVAS_WIDTH, CANVAS_HEIGHT. The next hint will tell you the x position to draw the paddle at.</b>
 </details>
+<br>
 <details> 
   <summary>Hint 2 - Paddle x</summary>
     The x position to be drawn at is CANVAS_WIDTH - PADDLE_WIDTH.<br>
     This should help you figure out the solution to the y position.
     The next hint will show you the y position.
 </details>
+<br>
 <details> 
   <summary>Hint 3 - Paddle y</summary>
    CANVAS_HEIGHT - PADDLE_HEIGHT
 </details>
+<br>
 <details> 
   <summary>Solution</summary>
    context.fillRect(CANVAS_WIDTH - PADDLE_WIDTH, CANVAS_HEIGHT - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
 </details>
-
+<br>
 Congrats! You just made the beginnings of your first ever game. 🙂
 If you struggled to follow along, don't worry. The completed code can be found [here](../code/Pong-1/pong.js)
 
