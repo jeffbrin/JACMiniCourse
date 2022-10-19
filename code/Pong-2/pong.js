@@ -1,29 +1,40 @@
-const canvas = document.getElementsByTagName('canvas')[0];
-const context = canvas.getContext('2d');
-
-const CANVAS_WIDTH = 1080;
-const CANVAS_HEIGHT = 720;
-canvas.width = CANVAS_WIDTH;
-canvas.height = CANVAS_HEIGHT;
-
-const PADDLE_WIDTH = 30;
-const PADDLE_HEIGHT = 140;
-const HORIZONTAL_PADDLE_PADDING = 10;
-const PADDLE_SPEED = 1000;
-
-let paddle1PositionX = HORIZONTAL_PADDLE_PADDING;
-let paddle1PositionY = 0;
-let paddle2PositionX = CANVAS_WIDTH - PADDLE_WIDTH - HORIZONTAL_PADDLE_PADDING;
-let paddle2PositionY = CANVAS_HEIGHT - PADDLE_HEIGHT;
-
-let BALL_SIZE = 20;
-let ballPositionX = CANVAS_WIDTH / 2 - BALL_SIZE / 2;
-let ballPositionY = CANVAS_HEIGHT / 2 - BALL_SIZE / 2;
-
-
+let canvas = document.getElementsByTagName("canvas")[0];
+let context = canvas.getContext("2d");
+const keys = {};
 
 // Make the canvas able to recieve input
 canvas.tabIndex = 1;
+
+// Create the canvas constants and set the dimensions
+const CANVAS_HEIGHT = 720;
+const CANVAS_WIDTH = 1080;
+canvas.height = CANVAS_HEIGHT;
+canvas.width = CANVAS_WIDTH;
+
+// Create the paddle constants
+const PADDLE_COLOUR = "white"
+const PADDLE_WIDTH = 30;
+const PADDLE_HEIGHT = 175;
+const PADDLE_SPEED = 400;
+
+// Store paddle positions
+let player1Y = 0;
+let player2Y = CANVAS_HEIGHT - PADDLE_HEIGHT;
+
+context.fillStyle = PADDLE_COLOUR;
+
+canvas.addEventListener('keydown', handleKeyPressDown);
+canvas.addEventListener('keyup', handleKeyPressUp);
+
+// Make the canvas able to recieve input
+canvas.tabIndex = 1;
+
+function handleKeyPressDown(event){
+    keys[event.key] = true;
+}
+function handleKeyPressUp(event){
+    keys[event.key] = false;
+}
 
 let lastTime = 0;
 // Function called every frame
@@ -40,27 +51,51 @@ function GameLoop(currentTime = 0)
     requestAnimationFrame(GameLoop);
 }
 
-// Update the game logic.
-function update(deltaTime)
-{
-    // TODO...
+function update(dt){
+    // Player 1 movement.
+    if (keys.w) {
+        // Subtract paddle speed from current Y scaled by deltaTime.
+        player1Y -= PADDLE_SPEED * dt;
+        if (player1Y < 0){
+            player1Y = 0;
+        }
+    }
+    else if (keys.s) {
+        // Add paddle speed to current Y scaled by deltaTime.
+        player1Y += PADDLE_SPEED * dt;
+        if (player1Y > CANVAS_HEIGHT - PADDLE_HEIGHT){
+            player1Y = CANVAS_HEIGHT - PADDLE_HEIGHT;
+        }
+    }
+
+    // Player 2 movement.
+    if (keys.ArrowUp) {
+        // Subtract paddle speed from current Y scaled by deltaTime.
+        player2Y -= PADDLE_SPEED * dt;
+        if (player2Y < 0){
+            player2Y = 0;
+        }
+    }
+    else if (keys.ArrowDown) {
+        // Add paddle speed to current Y scaled by deltaTime.
+        player2Y += PADDLE_SPEED * dt;
+        if (player2Y > CANVAS_HEIGHT - PADDLE_HEIGHT){
+            player2Y = CANVAS_HEIGHT - PADDLE_HEIGHT;
+        }
+    }
 }
 
 // Display the game logic
 function render()
 {
-    //Clearing the whole canvas
-    context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    // Clear the screen
+    context.clearRect(0, 0, CANVAS_WIDTH, CANVAS_WIDTH);
 
-    // Display the left paddle
-    context.fillStyle = 'white';
-    context.fillRect(paddle1PositionX, paddle1PositionY, PADDLE_WIDTH, PADDLE_HEIGHT);
+    // Draw the left paddle
+    context.fillRect(0, player1Y, PADDLE_WIDTH, PADDLE_HEIGHT);
 
-    // Display the right paddle
-    context.fillRect(paddle2PositionX, paddle2PositionY, PADDLE_WIDTH, PADDLE_HEIGHT);
-
-    // Display the ball
-    context.fillRect(ballPositionX, ballPositionY, BALL_SIZE, BALL_SIZE);
+    // Draw the right paddle
+    context.fillRect(CANVAS_WIDTH - PADDLE_WIDTH, player2Y, PADDLE_WIDTH, PADDLE_HEIGHT);
 }
 
 GameLoop();
