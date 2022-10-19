@@ -60,7 +60,7 @@ Functions "Return" values. This means that when a function finishes, it can plac
         return result;
     }
     
-### Practical example for pong
+### Practical example for pong 🏓
 ---
 
     // Checks if player 1 scored.
@@ -127,6 +127,11 @@ While loops loop until the condition is false.
     while (number < 10){
         console.log(number);
         number = number + getUserInput();
+    }
+
+
+    while(true){
+        //how long will this run?
     }
 
 ### For Loops
@@ -227,7 +232,7 @@ In the new project, create a new file and call it **index.html**
 ## Step 2.2 - Add the html template.
 Select the new html. In the html file, write **!** and click **enter**. Your html file should look like the following.
 
-<img src="../Assets/HtmlTemplate.png" height=300>
+<img src="../Assets/HtmlTemplate.png" height=auto>
 
 <br>
 
@@ -413,11 +418,13 @@ If you struggled to follow along, don't worry. The completed code can be found [
 <br><br><br>
 
 
-# 🖌️ (Optional) At Home Exercise: Draw onto the Canvas 🖼️
+# (Optional) At Home Exercise:<br> 🖌️ Draw onto the Canvas 🖼️ <br>and Get Input ⌨️
 ### 🎯Step 0 :
 What we did last class.
 Code is available on GitHub [here](https://github.com/jeffbrin/JACMiniCourse/tree/main/Previous%20Classes%20Code/Class%201).
 Look Under 'Previous Classes Code' Folder
+
+<br><br>
 
 ### 🎯Step 0.5:
 In order to be able to properly use the canvas we have to add a few lines of code and store the canvas's context into a variable.
@@ -425,9 +432,9 @@ In order to be able to properly use the canvas we have to add a few lines of cod
     const context = canvas.getContext('2d');
     canvas.tabIndex = 1;
 
-🗒️*Note **const** is another reserved key word used to declare a variable (like **let**) however once a value is assign to it, it cannot be changed*
+🗒️***Note** **const** is another reserved key word used to declare a variable (like **let**) however once a value is assign to it, it cannot be changed*
 
-
+<br><br>
 ### 🎯Step 1:
 We have our canvas in the HTML and we have a variable that is storing that HTML object. We now want to resize the canvas in order to make it bigger to better suit our needs.
 
@@ -443,6 +450,8 @@ Let us set them to a specific resolution:
     canvas.width = 1280;
     canvas.height = 720;
 
+<br><br>
+
 ### 🎯Step 2:
 Now that we have it sized the way we want, let us find a way to draw something onto the canvas.
 
@@ -454,7 +463,10 @@ The context variable is storing the 2d representation of what is inside the canv
     context.fillText("Hello World", canvas.width / 2 - 50 canvas.height / 2 - 50);
 We choose **canvas.width / 2** and **canvas.height / 2** in order to have it relatively center.
 
+<br><br>
+
 ### 🎯Step 3:
+---
 In a game we need to capture the player's input ⌨️.
 
 We will be doing something whenever the user presses the spacebar (denoted by ' ')
@@ -499,8 +511,11 @@ Your Code should look something like this:
 
     canvas.addEventListener('keypress', handleKeyPress);
 
+<br><br>
+
 ### 🎯Step 4
 We will now create the **handleKeyPress** function.
+<br>
 
 In this function we want to make sure that the key that triggered the keypress event was the spacebar key.
 
@@ -515,8 +530,12 @@ In this function we want to make sure that the key that triggered the keypress e
     }
 Add this code under the code written earlier.
 
+<br>
+
 ⚒️ Breaking down the code ⚒️
 ---
+
+<hr>
 We have a function that takes in an event as a parameter.
 
 This event is an object that contains properties, just like canvas except the properties are different.
@@ -525,7 +544,7 @@ We will check if event.key was the spacebar key (denoted by ' ').
 
 If this expression evaluates to true then we know the user pressed the spacebar and we will proceed into the if statement.
 
-🗒️ *Note if the user presses a different key, the function is still called, except nothing happens*
+🗒️ ***Note** if the user presses a different key, the function is still called, except nothing happens*
 
 Once inside the if statement body we will increment clicksCount, we will set the font to 40 pixels in size and the font is Arial.
 
@@ -533,23 +552,26 @@ Next is where we draw to the screen like we did earlier.
 
 🐛 However there is a Bug 🐛
 ---
-The function just keeps on getting called and the numbers just keep on getting drawn over eachother creating a mess.
+The function just keeps on getting called and the numbers just keep on getting drawn over each other creating a mess.
 
 ![Not Clearing Canvas](../Assets/notClearingCanvas.gif)
 
-In order to fix this bug we have to clear the canvas before redrawing the text.
+In order to fix this bug we have to **clear** the canvas **before** redrawing the text.
 
 This happens so fast that we can't perceive it and it gives the illusion of being a smooth transition.
 
 ![Frames Per Second](https://thumbs.gfycat.com/WholeDirtyLice-max-1mb.gif)
 
-![Clearing Canvas](../Assets/clearingCanvas.gif)
 
-Add this line of code inside the function before the context.fillStyle() line:
+<br>
+
+**Add** this line of code inside the function **before** the context.fillStyle() line:
 
     context.clearRect(0, 0, canvas.width, canvas.height);
 
+**This is clearing a rectangle starting at (0,0) and clearing the whole width and whole height**
 
+<br>
 The function will now look like:
 
     function handleKeyPress(event)
@@ -563,4 +585,5 @@ The function will now look like:
         }
     }
 
+![Clearing Canvas](../Assets/clearingCanvas.gif)
 
