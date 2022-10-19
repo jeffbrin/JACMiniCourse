@@ -19,9 +19,9 @@ Every frame renders and updates every 0.0167 Seconds or 16.7ms
 Every frame renders and updates every 0.0333 Seconds or 33.3ms
 
 ## The First Gif is scaling the game to 60 FPS, second is 30 FPS
-![60fps](../Assets/60fps.gif)
+<img src="../Assets/60fps.gif">
+<img src="../Assets/30fps.gif">
 
-![30fps](../Assets/30fps.gif)
 
 In both of these the ball is moving at 100 pixels * the framerate per update  function call however they are scaled to different framerates.
 
