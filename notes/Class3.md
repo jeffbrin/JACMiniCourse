@@ -46,7 +46,7 @@ Very simple it is the time elapsed between the previous frame and the current fr
 ## Clearing the canvas before rendering
 We have to clear the canvas every time right before we render. This will give the illusion of movement.
 
-### What is we don't clear?
+### What if we don't clear?
 Well...
 <br>
 
