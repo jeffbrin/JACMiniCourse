@@ -18,7 +18,7 @@ Every frame renders and updates every 0.0167 Seconds or 16.7ms
 ### 30 FPS
 Every frame renders and updates every 0.0333 Seconds or 33.3ms
 
-## The First Gif is scaling the game to 30 FPS, second is 60 FPS
+## The First Gif is simulating the game at 30 FPS, second is 60 FPS
 ![30fps](../Assets/30fps.gif)
 
 ![60fps](../Assets/60fps.gif)
