@@ -29,13 +29,13 @@ We want to avoid tying the physics to the framerate by using delta time.
 ```js
 // Old
 function update() {
-    spaceship.x += 10; 
+    ball.x += 10; 
     // Every frame, move the spaceship 10 pixels to the right.
 }
 
 // New
 function update(dt) {
-    spaceship.x += 10 * dt; 
+    ball.x += 10 * dt; 
     // Every frame, move the spaceship (10 * dt) pixels to the right.
 }
 ```
@@ -172,7 +172,7 @@ Then the render is called which is what is going to draw to the screen.
 
 ### Step 5: Move the paddle drawing logic into render()
 ---
-Move the code responsible for drawing the paddle into render. If you're using out code, your render function will look like this.
+Move the code responsible for drawing the paddle into render. If you're using our code, your render function will look like this.
 
 ```js
 // Display the game logic
