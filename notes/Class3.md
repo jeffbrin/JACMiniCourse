@@ -12,11 +12,11 @@ Receive Input -> Update the Game Logic -> Render on the screen
 We must scale all of our values with delta time in order for the game logic to behave the same on every computer.
 
 ### 60 FPS
-Every frame renders and updates every 0.0167 Seconds or 16.7ms
+Every frame updates then renders every 0.0167 Seconds or 16.7ms
 
 
 ### 30 FPS
-Every frame renders and updates every 0.0333 Seconds or 33.3ms
+Every frame updates then renders every 0.0333 Seconds or 33.3ms
 
 ## The First Gif is simulating the game at 30 FPS, second is 60 FPS
 ![30fps](../Assets/30fps.gif)
