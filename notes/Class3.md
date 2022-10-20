@@ -168,7 +168,7 @@ After getting the elapsed time, it calls the update function which handles any l
 
 Then the render is called which is what is going to draw to the screen.
 
-*requestAnimationFrame(GameLoop)* is outside the scope of this course, but basically, it calls the GameLoop function again, with the new current time. This allows the game to "Loop" without actually having a loop.
+*requestAnimationFrame(GameLoop)* is outside the scope of this course, but basically, it calls the GameLoop function again, with the new current time. This allows the game to "Loop" without actually having a loop. It is built in to JavaScript, we did not create this function. If you are curious and want to learn more click this [link](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame).
 
 ### Step 5: Move the paddle drawing logic into render()
 ---
