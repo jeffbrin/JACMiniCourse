@@ -170,6 +170,14 @@ Then the render is called which is what is going to draw to the screen.
 
 *requestAnimationFrame(GameLoop)* is outside the scope of this course, but basically, it calls the GameLoop function again, with the new current time. This allows the game to "Loop" without actually having a loop. It is built in to JavaScript, we did not create this function. If you are curious and want to learn more click this [link](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame).
 
+**Finally**, at the very bottom of our script, we're going to _call_ GameLoop. This will start our game.
+
+Add this code to the bottom of your script.
+
+```js
+GameLoop();
+```
+
 ### Step 5: Move the paddle drawing logic into render()
 ---
 Move the code responsible for drawing the paddle into render. If you're using our code, your render function will look like this.
