@@ -18,12 +18,12 @@ Every frame renders and updates every 0.0167 Seconds or 16.7ms
 ### 30 FPS
 Every frame renders and updates every 0.0333 Seconds or 33.3ms
 
-## The First Gif is scaling the game to 60 FPS, second is 30 FPS
-![60fps](../Assets/60fps.gif)
-
+## The First Gif is scaling the game to 30 FPS, second is 60 FPS
 ![30fps](../Assets/30fps.gif)
 
-In both of these the ball is moving at 100 pixels * the framerate per update  function call however they are scaled to different framerates.
+![60fps](../Assets/60fps.gif)
+
+In both of these the ball is moving at 100 pixels * the framerate per update function call. Think of it like telling someone to move 1 meter per second 30 times in a second vs. telling someone to move 1 meter per second 60 times in a second. The person moving 60 times will move faster.
 
 We want to avoid tying the physics to the framerate by using delta time.
 
