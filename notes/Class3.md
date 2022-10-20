@@ -30,13 +30,13 @@ We want to avoid tying the physics to the framerate by using delta time.
 // Old
 function update() {
     ball.x += 10; 
-    // Every frame, move the spaceship 10 pixels to the right.
+    // Every frame, move the ball 10 pixels to the right.
 }
 
 // New
 function update(dt) {
     ball.x += 10 * dt; 
-    // Every frame, move the spaceship (10 * dt) pixels to the right.
+    // Every frame, move the ball (10 * dt) pixels to the right.
 }
 ```
 
