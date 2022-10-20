@@ -280,6 +280,10 @@ One important hint for free - To get the value of the up and down arrows, use `k
   <summary>Hint</summary>
    Change the value of player2Y to change the position of paddle 2.
 </details>
+<details>
+    <summary>Hint 2</summary>
+    Remember that drawing starts from the TOP LEFT corner.
+</details>
 
 <details> 
   <summary>Solution</summary>
