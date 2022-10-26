@@ -18,8 +18,21 @@ const PADDLE_HEIGHT = 175;
 
 context.fillStyle = PADDLE_COLOUR;
 
+const keys = {};
+
+canvas.addEventListener('keydown', handleKeyPressDown);
+canvas.addEventListener('keyup', handleKeyPressUp);
+
 // Draw the left paddle
 context.fillRect(0, 0, PADDLE_WIDTH, PADDLE_HEIGHT);
 
+
 // Draw the right paddle
 context.fillRect(CANVAS_WIDTH - PADDLE_WIDTH, CANVAS_HEIGHT - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
+
+function handleKeyPressDown(event){
+
+}
+function handleKeyPressUp(event){
+    
+}
