@@ -131,7 +131,7 @@ Here are the functions which will detect whether the ball collided with a paddle
 ```js
 function ballCollidedWithAPaddle(){
     return didCollide(ballX, ballY, BALL_SIZE, BALL_SIZE, 0, player1Y, PADDLE_WIDTH, PADDLE_HEIGHT) 
-           || didCollide(ballX, ballY, BALL_SIZE, BALL_SIZE, CANVAS_WIDTH - PADDLE_WIDTH, player1Y, PADDLE_WIDTH, PADDLE_HEIGHT) 
+           || didCollide(ballX, ballY, BALL_SIZE, BALL_SIZE, CANVAS_WIDTH - PADDLE_WIDTH, player2Y, PADDLE_WIDTH, PADDLE_HEIGHT) 
 }
 
 function didCollide(x1, y1, width1, height1, x2, y2, width2, height2){
