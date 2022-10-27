@@ -26,3 +26,7 @@ The code demo can be found [Here](./code/Pong-1)
 ## Week 3
 The notes can be found [Here](./notes/Class3.md)<br>
 The code demo can be found [Here](./code/Pong-2)
+
+## Week 4
+The notes can be found [Here](./notes/Class4.md)<br>
+The code demo can be found [Here](./code/Pong-3)
